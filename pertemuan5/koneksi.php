@@ -20,7 +20,15 @@
             }
             return $hasil;
         }     
-
+        public function tambahFakultas($kodeFakultas,$namaFakultas){
+            mysqli_query($this->koneksi, "INSERT INTO fakultas (kd_fekultas, nm_fakultas) VALUES ('$kodeFakultas','$namaFakultas')");
+        }
+        public function editFakultas($kodeFakultas,$namaFakultas,$id){
+            mysqli_query($this->koneksi, "UPDATE fakultas SET kd_fekultas='$kodeFakultas', nm_fakultas='$namaFakultas' WHERE id='$id' ");
+        }
+        public function hapusFakultas($id){            
+            mysqli_query($this->koneksi, "DELETE FROM fakultas WHERE id = '$id'");
+        }
     }
     // $db = new koneksi;
     // $query = "select * from fakultas";
