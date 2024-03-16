@@ -1,0 +1,2 @@
+linst Kelompok
+nama (nim)
